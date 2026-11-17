@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shayan Bilal | Finance Graduate</title>
+  <meta name="description" content="Shayan Bilal, BBA Finance graduate. Projects in invoice reconciliation, company valuation and credit risk, built with Excel, Python and AI.">
+
+  <!-- Link preview on LinkedIn / WhatsApp -->
+  <meta property="og:title" content="Shayan Bilal | Finance Graduate">
+  <meta property="og:description" content="Finance projects: invoice reconciliation, PSX valuation, credit risk scoring.">
+  <meta property="og:image" content="https://shayanbilal2000.github.io/assets/credit-score.jpg">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============================================================ NAV -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">Shayan Bilal</a>
+    <nav class="nav-links">
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-small" href="assets/Shayan_Bilal_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============================================================ HERO -->
+<section class="hero wrap">
+  <p class="eyebrow">BBA Finance · Bahria University · Islamabad</p>
+  <h1>I build practical finance tools with Excel, Python and AI.</h1>
+  <p class="lead">
+    Finance graduate with internship experience in reconciliation, invoicing and expense reporting.
+    I've built three working projects: an invoice reconciliation assistant, a company valuation dashboard
+    and a credit risk model. Looking for an entry-level role in financial analysis, banking, accounting or FP&amp;A.
+  </p>
+  <div class="hero-actions">
+    <a class="btn" href="#projects">See my projects</a>
+    <a class="btn btn-ghost" href="assets/Shayan_Bilal_Resume.pdf" target="_blank" rel="noopener">Download resume (PDF)</a>
+  </div>
+  <ul class="social">
+    <!-- TODO: add once he has a LinkedIn profile: <li><a href="https://www.linkedin.com/in/YOUR-PROFILE" target="_blank" rel="noopener">LinkedIn</a></li> -->
+    <li><a href="https://github.com/shayanbilal2000" target="_blank" rel="noopener">GitHub</a></li>
+    <li><a href="mailto:shayanbilal2000@gmail.com">shayanbilal2000@gmail.com</a></li>
+  </ul>
+</section>
+
+<!-- ============================================================ APPROACH -->
+<section class="wrap approach" aria-label="How I work">
+  <div class="approach-item">
+    <h3>Finance first</h3>
+    <p>Each project solves a real finance task: matching invoices to payments, valuing a company, deciding on a loan.</p>
+  </div>
+  <div class="approach-item">
+    <h3>AI with controls</h3>
+    <p>AI reads documents and drafts notes, but every number it produces is checked against the source data automatically.</p>
+  </div>
+  <div class="approach-item">
+    <h3>Tested and explainable</h3>
+    <p>Results are measured on test data, checked by automated tests, and every decision can be explained line by line.</p>
+  </div>
+</section>
+
+<!-- ============================================================ PROJECTS -->
+<section id="projects" class="section wrap">
+  <h2 class="section-title">Projects</h2>
+
+  <!-- ---------------- Project 1 -->
+  <article class="project">
+    <a class="shot" href="assets/invoice-recon.jpg" target="_blank" rel="noopener">
+      <img src="assets/invoice-recon.jpg" alt="Reconciliation results: matched invoices and colour-coded exceptions" loading="lazy" width="1080" height="675">
+    </a>
+    <div class="project-body">
+      <p class="tag">Accounts payable</p>
+      <h3>AI Invoice Reconciliation Assistant</h3>
+      <p>
+        Matching supplier invoices to the bank statement is slow manual work. This app reads PDF invoices with AI,
+        matches each one to a bank payment, and flags what needs a person's attention.
+      </p>
+      <ul class="bullets">
+        <li>Google Gemini extracts vendor, invoice number, date, tax and total from invoices in any layout.</li>
+        <li>Rule-based matching on amount, date window and fuzzy vendor name, so every match can be explained to an auditor.</li>
+        <li>Flags duplicates, amount mismatches (including swapped digits), unpaid invoices and unexplained payments.</li>
+        <li>Downloads a colour-coded Excel report with one sheet per exception type.</li>
+      </ul>
+      <ul class="results">
+        <!-- TODO: once you've run scripts/evaluate.py --method gemini, add the AI accuracy here -->
+        <li><strong>50</strong> test invoices in 3 layouts</li>
+        <li><strong>12 / 12</strong> planted errors flagged by the matching rules</li>
+        <li><strong>84%</strong> of fields read by the no-AI baseline</li>
+      </ul>
+      <p class="stack">Python · pandas · Google Gemini API · Streamlit · openpyxl</p>
+      <p class="links">
+        <!-- TODO: uncomment once deployed on Streamlit Cloud: <a href="https://YOUR-APP.streamlit.app">Live demo →</a> -->
+        <a href="https://github.com/shayanbilal2000/ai-invoice-reconciliation" target="_blank" rel="noopener">Code on GitHub →</a>
+      </p>
+    </div>
+  </article>
+
+  <!-- ---------------- Project 2 -->
+  <article class="project">
+    <a class="shot" href="assets/valuation-dcf.jpg" target="_blank" rel="noopener">
+      <img src="assets/valuation-dcf.jpg" alt="DCF valuation tab: value per share versus share price and a bridge from cash flows to equity value" loading="lazy" width="1080" height="675">
+    </a>
+    <div class="project-body">
+      <p class="tag">Equity research</p>
+      <h3>PSX Cement Valuation &amp; Ratio Analysis Dashboard</h3>
+      <!-- TODO: delete this badge once data/financials.xlsx holds real annual-report figures -->
+      <p class="badge">Demo data for now: real PSX figures being added</p>
+      <p>
+        Analyses Pakistan Stock Exchange cement companies the way an equity analyst would: five years of financial
+        statements, ratio analysis, peer comparison and a discounted cash flow valuation.
+      </p>
+      <ul class="bullets">
+        <li>16 ratios covering liquidity, profitability, leverage and efficiency, plus P/E, P/B and EV/EBITDA.</li>
+        <li>DCF with CAPM cost of equity, WACC, terminal value and a sensitivity table you can adjust live.</li>
+        <li>A matching Excel model with live formulas (blue inputs, black formulas) that can be downloaded from the app.</li>
+        <li>An AI analyst note written only from the calculated figures, with every number in it checked.</li>
+      </ul>
+      <ul class="results">
+        <li><strong>340</strong> Excel figures checked against Python: all match</li>
+        <li><strong>4</strong> companies · <strong>5</strong> years</li>
+      </ul>
+      <p class="stack">Excel · Python · pandas · Plotly · Streamlit · Google Gemini API</p>
+      <p class="links">
+        <!-- TODO: uncomment once deployed on Streamlit Cloud: <a href="https://YOUR-APP.streamlit.app">Live demo →</a> -->
+        <a href="https://github.com/shayanbilal2000/psx-valuation-dashboard" target="_blank" rel="noopener">Code on GitHub →</a>
+      </p>
+    </div>
+  </article>
+
+  <!-- ---------------- Project 3 -->
+  <article class="project">
+    <a class="shot" href="assets/credit-score.jpg" target="_blank" rel="noopener">
+      <img src="assets/credit-score.jpg" alt="Applicant score: probability of default gauge, decision, and the factors driving the risk" loading="lazy" width="1080" height="675">
+    </a>
+    <div class="project-body">
+      <p class="tag">Credit risk</p>
+      <h3>Credit Risk Scoring Model</h3>
+      <p>
+        Predicts the probability that a loan applicant defaults, explains which factors drive the risk, and
+        recommends Approve, Refer or Decline. Trained on 1,000 real past applicants (German Credit dataset).
+      </p>
+      <ul class="bullets">
+        <li>Logistic regression compared with a decision tree, evaluated on 200 applicants the model never saw.</li>
+        <li>Approval cut-off chosen to minimise expected cost, since a bad loan costs about 5× more than a lost good customer.</li>
+        <li>Per-applicant explanation of what pushes the risk up or down.</li>
+        <li>AI-drafted credit memo with a number check. Sex, marital status and nationality are excluded from the model.</li>
+      </ul>
+      <ul class="results">
+        <li><strong>0.805</strong> test AUC (Gini 0.61)</li>
+        <li><strong>87%</strong> of defaulters caught</li>
+        <li><strong>~60%</strong> lower expected cost than approving everyone</li>
+      </ul>
+      <p class="stack">Python · scikit-learn · Plotly · Streamlit · Google Gemini API</p>
+      <p class="links">
+        <!-- TODO: uncomment once deployed on Streamlit Cloud: <a href="https://YOUR-APP.streamlit.app">Live demo →</a> -->
+        <a href="https://github.com/shayanbilal2000/credit-risk-scoring" target="_blank" rel="noopener">Code on GitHub →</a>
+      </p>
+    </div>
+  </article>
+</section>
+
+<!-- ============================================================ EXPERIENCE -->
+<section id="experience" class="section wrap">
+  <h2 class="section-title">Experience</h2>
+  <div class="entry">
+    <div class="entry-head">
+      <h3>Finance Intern · Triflux Private Limited</h3>
+      <span class="dates">Jul 2025 – Sep 2025</span>
+    </div>
+    <ul class="bullets">
+      <li>Reconciled invoices, expense records and statements against internal records, and reported discrepancies to the finance team.</li>
+      <li>Compiled monthly expense data and prepared summary reports in Excel.</li>
+      <li>Prepared and verified invoices and assisted with basic payroll calculations.</li>
+      <li>Recorded transactions and kept supporting documents organised for audit preparation.</li>
+      <li>Looked up and updated transaction and customer records in Zoho Inventory and Zoho CRM.</li>
+    </ul>
+  </div>
+
+  <h2 class="section-title section-title-sub">Education</h2>
+  <div class="entry">
+    <div class="entry-head">
+      <h3>BBA, Finance · Bahria University, Islamabad</h3>
+      <span class="dates">Mar 2022 – Jan 2026</span>
+    </div>
+    <p>CGPA 3.19 / 4.00</p>
+  </div>
+  <div class="entry">
+    <div class="entry-head">
+      <h3>HSSC, Pre-Engineering · Hamza Army Public College, Rawalpindi</h3>
+      <span class="dates">2017 – 2019</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ SKILLS -->
+<section id="skills" class="section wrap">
+  <h2 class="section-title">Skills</h2>
+  <div class="skills">
+    <div>
+      <h3>Finance &amp; accounting</h3>
+      <p>Financial statement analysis, ratio analysis, DCF valuation, financial modelling, account reconciliation, invoice processing, expense tracking, payroll, credit risk analysis</p>
+    </div>
+    <div>
+      <h3>Tools</h3>
+      <p>Microsoft Excel (pivot tables, XLOOKUP, charts), Word, PowerPoint, Zoho Inventory, Zoho CRM</p>
+    </div>
+    <div>
+      <h3>Data &amp; AI</h3>
+      <p>Python (pandas, scikit-learn, Plotly), Streamlit, prompt engineering, Google Gemini API, Git &amp; GitHub</p>
+    </div>
+    <div>
+      <h3>Languages</h3>
+      <p>English (professional), Urdu (native)</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ CONTACT -->
+<section id="contact" class="section wrap contact">
+  <h2 class="section-title">Contact</h2>
+  <p class="lead">Open to entry-level roles in financial analysis, banking, accounting and FP&amp;A in Islamabad, Rawalpindi or remote.</p>
+  <div class="hero-actions">
+    <a class="btn" href="mailto:shayanbilal2000@gmail.com">Email me</a>
+    <!-- TODO: <a class="btn btn-ghost" href="https://www.linkedin.com/in/YOUR-PROFILE" target="_blank" rel="noopener">Connect on LinkedIn</a> -->
+  </div>
+</section>
+
+</main>
+
+<footer class="footer wrap">
+  <p>© <span id="year">2026</span> Shayan Bilal · Built with HTML and CSS, hosted on GitHub Pages</p>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
